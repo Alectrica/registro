@@ -862,7 +862,7 @@
 	        <form 
                   hidden
                   [hidden]='!consentimiento' 
-                  action-xhr='https://backendalectrica.herokuapp.com/contactos/create' 
+                  action-xhr='https://backendalectrica.herokuapp.com/contactos/create/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)' 
                   class='' custom-validation-reporting='show-first-on-submit' 
                   method='post' 
                   on='submit-success:AMP.setState({contactoSelected: true})' 
