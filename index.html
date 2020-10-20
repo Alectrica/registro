@@ -724,14 +724,13 @@
     <div id="abe-preview-header" 
       class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
       <section amp-access="loggedIn">
-        Sesión Iniciada
         <template amp-access-template type="amp-mustache">
         <!--
         {{auth_token}}
         {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
           {{dueno_remoto}} | current_user {{current_user}}
         -->
-        {{current_reader}}
+        Sessión Iniciada: {{current_reader}}
         </template>
       </section>
 
@@ -829,7 +828,7 @@
             <h1 class = "m1">Registro</h1>
           </template>
 
-	  <div amp-access="NONOT loggedIn"
+	  <div amp-access="NOT loggedIn"
             class = 'stepper vertical' >
 	    <div 
               [hidden]='currentStep > 0'>
