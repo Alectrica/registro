@@ -863,20 +863,23 @@
                   on='submit-success:AMP.setState({contactoSelected: true})' 
                   target='_top' 
                   verify-xhr="https://backendalectrica.herokuapp.com/contactos/verify">
-                    <input data-amp-replace='CLIENT_ID' 
+                    <input 
                        name='clientId' 
                        type='hidden' 
-                       value="CLIENT_ID(uid)">
+                       value="CLIENT_ID(uid)"
+                       data-amp-replace='CLIENT_ID' >
 
-                    <input data-amp-replace='RETURN_URL' 
+                    <input 
                        name='return' 
                        type='hidden' 
-                       value="RETURN_URL">
+                       value="RETURN_URL"
+                       data-amp-replace='RETURN_URL'  >
 
-                    <input data-amp-replace='READER_ID' 
+                    <input  
                        name='rid' 
                        type='hidden' 
-                       value="READER_ID(uid)">
+                       value="READER_ID(uid)"
+                       data-amp-replace='READER_ID' >
 
 
 		  <p>Ingrese sus datos de contacto</p>
