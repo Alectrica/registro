@@ -821,13 +821,13 @@
          </h2>
        -->
 
-        <div amp-access="NOT loggedIn"   >
+        <div amp-access="NOT loggedIn" amp-access-hide  >
           <template amp-access-template 
             type="amp-mustache">
             <h1 class = "m1">Registro</h1>
           </template>
 
-	  <div amp-access="NOT loggedIn"
+	  <div amp-access="NOT loggedIn" amp-access-hide
             class = 'stepper vertical' >
 	    <div 
               [hidden]='currentStep > 0'>
