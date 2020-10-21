@@ -847,7 +847,7 @@
 
 		  <hr>
                 -->
-		  <p>¿Presione acepto si conviene en suministrar sus datos de contacto para que un colaborador pueda coordinar el trabajo?</p>
+		  <p>¿Presione acepto si acepta que se guarden sus datos de contacto para que un colaborador pueda coordinar el trabajo?</p>
 
 		  <amp-selector 
 		    class='poll' 
@@ -883,8 +883,9 @@
 
 
 
+                 <!---
 		  <p>Ingrese sus datos de contacto</p>
-
+                 -->
 		  <div class='row px2 mt4 md-mt3'>
 		    <div class='flex flex-wrap mxn2'>
 
@@ -922,7 +923,7 @@
 
                       <div class='col-9 md-col-9 px2'>
                         <div class='ampstart-input inline-block relative m0 p0 mb3'>
-                          <input class='block border-none p0 m0' id='password' name='password' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='password' value=''>
+                          <input  class='block border-none p0 m0' id='password' name='password' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='hidden' value='1'>
                           <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='password'>Password</label>
                           <span validation-for='password' visible-when-invalid='valueMissing'></span>
                           <span validation-for='password' visible-when-invalid='typeMismatch'></span>
@@ -932,7 +933,7 @@
 
                       <div class='col-9 md-col-9 px2'>
                         <div class='ampstart-input inline-block relative m0 p0 mb3'>
-                          <input class='block border-none p0 m0' id='verification-password' name='password_confirmation' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='password' value=''>
+                          <input class='block border-none p0 m0' id='verification-password' name='password_confirmation' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='hidden' value='1'>
                           <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='verification-password'>Repita la Password</label>
                           <span validation-for='verification-password' visible-when-invalid='valueMissing'></span>
                           <span validation-for='verification-password' visible-when-invalid='typeMismatch'></span>
