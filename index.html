@@ -766,6 +766,7 @@
           La autorización no ha sido exitosa. Puede intentar registrarse.  
         </div>
         -->
+        <!--
            <h2 amp-access="NOT loggedIn AND NOT subscriber" 
              class="m1" > 
              Suscripción
@@ -775,19 +776,22 @@
              class="m1">
              Abra una suscripción para recibir notificaciones de nuevos trabajos
            </h3>
-
+        -->
+        <!--
           <button amp-access="NOT loggedIn AND NOT subscriber"
             on="tap:amp-access.login-create-reader"
             class="ampstart-btn ml1 caps">
             Abrir Suscripción
           </button>
+         -->
 
-
+         <!--
           <button amp-access="NOT loggedIn AND subscriber"
             on="tap:amp-access.login-destroy-reader"
             class="ampstart-btn ml1 caps">
             Cerrar Suscripción 
            </button>
+          -->
 
            <h2 amp-access="subscriber" 
              class="m1">
@@ -799,13 +803,13 @@
              Eliminar una suscripción
            </h3>
 
-           <button amp-access="NOT loggedIn AND subscriber"
+           <button amp-access="NOT loggedIn"
              on="tap:amp-access.login-sign-in"
              class="ampstart-btn ml1 caps">
              Iniciar Sesión
            </button>
 
-           <button amp-access="loggedIn AND subscriber"
+           <button amp-access="loggedIn"
              on="tap:amp-access.login-sign-out"
              class="ampstart-btn ml1 caps">
              Cerrar Sesión
