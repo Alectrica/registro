@@ -740,7 +740,6 @@
         {{auth_token}}
         {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
           {{dueno_remoto}} | current_user {{current_user}}
-        
         {{current_reader}}
         -->
         </template>
@@ -803,13 +802,13 @@
            </h3>
           -->
          <div class="my2">
-           <button amp-access="auth_token AND NOT loggedIn"
+           <button amp-access="auth_token AND NOT loggedIn" amp-access-hide
              on="tap:amp-access.login-sign-in"
              class="ampstart-btn ml1 caps">
              Iniciar Sesión
            </button>
 
-           <button amp-access="auth_token AND loggedIn"
+           <button amp-access="auth_token AND loggedIn" amp-access-hide
              on="tap:amp-access.login-sign-out"
              class="ampstart-btn ml1 caps">
              Cerrar Sesión
