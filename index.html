@@ -984,26 +984,15 @@
 
 		  <div submit-success=''>
 		    <template type='amp-mustache'>
-		    !Todo resultó bien!
-
-         <div class="my2">
-           <button amp-access="auth_token AND NOT loggedIn"
-             on="tap:amp-access.login-sign-in"
-             class="ampstart-btn ml1 caps">
-             Iniciar Sesión
-           </button>
-         </div>
-          <!--
-                     <div class="my2">
-                        <amp-bodymovin-animation
-                           [hidden] = "{{seguro}}"
-                            layout="fixed"
-                            width="15" height="15"
-                            src="https://backend.alectrica.cl/api/v1/electrico/circuitos/atencion.json"
-                        >
-                     </div>
-            -->
-		    </template>
+		      !Todo resultó bien!
+                      <div class="my2">
+                        <button amp-access="auth_token AND NOT loggedIn"
+                          on="tap:amp-access.login-sign-in"
+                          class="ampstart-btn ml1 caps">
+                          Iniciar Sesión
+                        </button>
+                      </div>
+                    </template>
 		  </div>
 
 		  <div submit-error=''>
@@ -1037,14 +1026,17 @@
             items = "."
             single-item
             layout="fixed-height"
-            src="https://wwww.alectrica.cl/electrico/presupuestos.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"  
+            src="https://www.alectrica.cl/electrico/presupuestos.json"  
             id="items-list" >
+
             <div>
             </div>
+
             <div overflow
               class = "list-overflow">
               VER MAS
             </div>
+
             <div fallback>
               <div class = "content">
                <button 
@@ -1055,6 +1047,7 @@
                 </button>
               </div>
             </div>
+
           </amp-list>
         </section>
 
@@ -1070,8 +1063,8 @@
                 height="90"
                 layout="fixed"
                 aria-describedby = "caption"
-                alt="{{nombre}}"
-                src="{{img}}">
+                alt="{{title}}"
+                src="{{url}}">
               </amp-img>
 
               <div
