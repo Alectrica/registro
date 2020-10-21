@@ -1030,7 +1030,7 @@
           </div> <!-- stepper vertical -->
         <section>
           <amp-list
-            template = "items-list-template"
+            template = "presupuestos-list-template"
             credentials = "omit"
             class="items m1"
             width="auto"
@@ -1038,7 +1038,7 @@
             items = "."
             single-item
             layout="fixed-height"
-            src="https://backend.alectrica.cl/api/v1/electrico/circuitos/get.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"  
+            src="https://wwww.alectrica.cl/electrico/presupuestos.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"  
             id="items-list" >
             <div>
             </div>
@@ -1071,40 +1071,14 @@
                 height="90"
                 layout="fixed"
                 aria-describedby = "caption"
-                alt="{{cantidad}}"
+                alt="{{nombre}}"
                 src="{{img}}">
-
-                <form method   = "POST"
-                   class = "close-gallery-button"
-                    action-xhr = "https://www.backend.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
-                    target    = "_top"
-                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
-                   <input name = "clientId" 
-                       type = "hidden" 
-                       value = "CLIENT_ID(uid)" 
-                       data-amp-replace = "CLIENT_ID">
-                       <button  type = "submit" >X</button>
-                </form>
               </amp-img>
 
               <div
                 id = "caption"
                 hidden>
-                {{nombre}}. Potencia: {{potencia}} W. Circuito: {{circuito}}.
-                <!---
-                <form method   = "POST"
-                    class = "close-gallery-button"
-                    action-xhr = "https://backend.alectrica.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
-                    target    = "_top"
-                    on = "submit-success:carrusel-list.refresh">
-                   <input name = "clientId" 
-                       type = "hidden" 
-                       value = "CLIENT_ID(uid)" 
-                       data-amp-replace = "CLIENT_ID">
-                   <button  type = "submit" > x </button>
-
-                </form>
-                -->
+                {{nombre}}.
               </div>
            {{/items}}
         </template>
