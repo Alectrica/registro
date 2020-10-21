@@ -44,6 +44,9 @@
     <meta name="amp-experiment-token" content="HfmyLgNLmblRg3Alqy164Vywr">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
+    <script async custom-element= "amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"> </script>
+
+
     <script async custom-element="amp-bodymovin-animation" src="https://cdn.ampproject.org/v0/amp-bodymovin-animation-0.1.js"></script>
     <script async custom-element="amp-access"   src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
@@ -815,7 +818,7 @@
           -->
          <div class="my2">
            <button amp-access="auth_token AND NOT loggedIn" amp-access-hide
-             on="tap:amp-access.login-sign-in"
+             on="tap:amp-web-push.subscribe"
              class="ampstart-btn ml1 caps">
              Iniciar Sesión
            </button>
