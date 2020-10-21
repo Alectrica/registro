@@ -791,12 +791,12 @@
 
            <h2 amp-access="subscriber" 
              class="m1">
-             Sesión
+             Crear una suscripción
            </h2>
 
-           <h3 amp-access="subscriber"
+           <h3 amp-access="NOT subscriber"
              class="m1">
-             Abra una sesión para consultar información del día.
+             Eliminar una suscripción
            </h3>
 
            <button amp-access="NOT loggedIn AND subscriber"
@@ -811,6 +811,7 @@
              Cerrar Sesión
            </button>
 
+        <!--
          <h1 amp-access="subscriber AND loggedIn"
             class="m1"> Registro
          </h1>
@@ -818,7 +819,7 @@
             class="m1" >
            Regístrese como Colaborador para tomar solicitudes de clientes
          </h2>
-
+       -->
           <template amp-access-template 
             type="amp-mustache">
             <h1 class = "m1">Registro</h1>
