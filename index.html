@@ -954,8 +954,16 @@
 
 		  <div submit-success=''>
 		    <template type='amp-mustache'>
-		    !Todo resultó bien! Pero no está de más que active las notificaciones. Los imprevistos son frecuentes en los trabajos eléctricos.
+		    !Todo resultó bien!
 
+         <div class="my2">
+           <button amp-access="auth_token AND NOT loggedIn"
+             on="tap:amp-access.login-sign-in"
+             class="ampstart-btn ml1 caps">
+             Iniciar Sesión
+           </button>
+         </div>
+          <!--
                      <div class="my2">
                         <amp-bodymovin-animation
                            [hidden] = "{{seguro}}"
@@ -964,13 +972,7 @@
                             src="https://backend.alectrica.cl/api/v1/electrico/circuitos/atencion.json"
                         >
                      </div>
-                     <div class="my2">
-                        <button 
-                          on="tap:amp-access.login-create-reader"
-                          id="create-reader"
-                          class="ampstart-btn ampstart-btn-secondary ml1 caps"> Activar Notificaciones
-                        </button>
-                     </div>
+            -->
 		    </template>
 		  </div>
 
