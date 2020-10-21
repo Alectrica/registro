@@ -1028,7 +1028,90 @@
 	      </div> <!-- si nombre -->
             </div> <!--- sección de diálogo -->
           </div> <!-- stepper vertical -->
-        </div> <!-- NOT loggedIn -->
+        <section>
+          <amp-list
+            template = "items-list-template"
+            credentials = "omit"
+            class="items m1"
+            width="auto"
+            height="145"
+            items = "."
+            single-item
+            layout="fixed-height"
+            src="https://backend.alectrica.cl/api/v1/electrico/circuitos/get.json?auth_token=AUTHDATA(auth_token)&macarron_de_autorizacion=AUTHDATA(macarron_de_autorizacion)"  
+            id="items-list" >
+            <div>
+            </div>
+            <div overflow
+              class = "list-overflow">
+              VER MAS
+            </div>
+            <div fallback>
+              <div class = "content">
+               <button 
+                 amp-access = "loggedIn"
+                 class="ampstart-btn ml1 caps"
+                 on="tap:items-list.refresh"
+                  type='submit'>Refrescar
+                </button>
+              </div>
+            </div>
+          </amp-list>
+        </section>
+
+        <template 
+          type = "amp-mustache"
+          id = "items-list-template" >
+           {{^items}}
+           No hay items
+           {{/items}}
+           {{#items}}
+              <amp-img width="100"
+                tabindex = 0
+                height="90"
+                layout="fixed"
+                aria-describedby = "caption"
+                alt="{{cantidad}}"
+                src="{{img}}">
+
+                <form method   = "POST"
+                   class = "close-gallery-button"
+                    action-xhr = "https://www.backend.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+                    target    = "_top"
+                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
+                   <input name = "clientId" 
+                       type = "hidden" 
+                       value = "CLIENT_ID(uid)" 
+                       data-amp-replace = "CLIENT_ID">
+                       <button  type = "submit" >X</button>
+                </form>
+              </amp-img>
+
+              <div
+                id = "caption"
+                hidden>
+                {{nombre}}. Potencia: {{potencia}} W. Circuito: {{circuito}}.
+                <!---
+                <form method   = "POST"
+                    class = "close-gallery-button"
+                    action-xhr = "https://backend.alectrica.cl/api/v1/electrico/circuitos/{{id}}/dropFromCircuito.json"
+                    target    = "_top"
+                    on = "submit-success:carrusel-list.refresh">
+                   <input name = "clientId" 
+                       type = "hidden" 
+                       value = "CLIENT_ID(uid)" 
+                       data-amp-replace = "CLIENT_ID">
+                   <button  type = "submit" > x </button>
+
+                </form>
+                -->
+              </div>
+           {{/items}}
+        </template>
+
+
+
+        </div> <!-- loggedIn -->
 
       </div>  <!-- ampstart-card m1 -->
     </div>
