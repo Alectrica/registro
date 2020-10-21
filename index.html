@@ -821,7 +821,7 @@
          </h2>
        -->
 
-        <div amp-access="NOT loggedIn" amp-access-hide  >
+        <div amp-access="Subscriber AND NOT loggedIn" amp-access-hide  >
           <template amp-access-template 
             type="amp-mustache">
             <h1 class = "m1">Registro</h1>
@@ -868,6 +868,17 @@
                        type='hidden' 
                        value="CLIENT_ID(uid)"
                        data-amp-replace='CLIENT_ID' >
+
+                    <input 
+                       name='rid' 
+                       type='hidden' 
+                       value="READER"
+                       data-amp-replace='READER_ID' >
+
+
+
+
+
 
 		  <p>Ingrese sus datos de contacto</p>
 
