@@ -804,13 +804,13 @@
            </h3>
           -->
          <div class="my2">
-           <button amp-access="NOT loggedIn"
+           <button amp-access="auth_token and NOT loggedIn"
              on="tap:amp-access.login-sign-in"
              class="ampstart-btn ml1 caps">
              Iniciar Sesión
            </button>
 
-           <button amp-access="loggedIn"
+           <button amp-access="auth_token and loggedIn"
              on="tap:amp-access.login-sign-out"
              class="ampstart-btn ml1 caps">
              Cerrar Sesión
