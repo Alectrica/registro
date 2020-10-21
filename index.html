@@ -830,12 +830,10 @@
 
          -->
 
-	  <div amp-access="NOT loggedIn" amp-access-hide
-            class = 'stepper vertical' >
-	    <div > 
-           <!---              [hidden]='currentStep > 0'> -->
-	   <!--  <div class='clearfix content'> -->
-              <div>
+	  <div amp-access="NOT loggedIn" amp-access-hide >
+	    <div class = 'stepper vertical' 
+              [hidden]='currentStep > 0'>
+	      <div class='clearfix content'>
 	        <span  
 		  role='button' 
 		  tabindex='0'>
