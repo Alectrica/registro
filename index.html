@@ -1075,20 +1075,23 @@ head>
                 tabindex = 0
                 height="200"
                 layout="fixed"
+                on="tap:llamar-lightbox"
                 aria-describedby = "caption"
                 alt="{{descripcion}}"
                 src="https://registro.alectrica.cl/img/alectrico.png">
-
-                <form method = "PUT"
-                  class = "close-gallery-button"
-                  action-xhr = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json"
-                  target = "_top"
-                  on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
-
-                  <button type = "submit" >REEMBOLSAR</button>
-                </form>
-
               </amp-img>
+
+                <amp-image-lightbox id="llamar-lightbox"
+                  layout="nodisplay">
+                  <div 
+                    role="button"
+                    tabindex="0">
+                    <a class="ampstart-btn caps m2 close-gallery-button"
+                      href = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json">
+                      Solicitar Reembolso
+                    </a>
+                  </div>
+                </amp-image-lightbox>
 
               <div
                 id = "caption">
