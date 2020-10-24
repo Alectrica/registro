@@ -751,12 +751,22 @@
       <div class="ampstart-card m1">
         <section amp-access="loggedIn" amp-access-hide>
 
+        <amp-install-serviceworker
+          src="/service_worker.js"
+          data-iframe-src="https://regisro.alectrica.cl/service_worker.js"
+          layout="nodisplay">
+        </amp-install-serviceworker>
+
+
+
           <p>¿Desea Recibir Notificaciones?</p>
           <p></p>
           <p></p>
           <button class='ampstart-btn ampstart-btn-secondary caps user-valid valid' on='tap:amp-web-push.subscribe' rel='nofollow'>SI</button>
           <button class='ampstart-btn ampstart-btn-secondary caps user-valid valid' on='tap:amp-web-push.unsubscribe' rel='nofollow'>NO</button>
           <amp-web-push helper-iframe-url='https://registro.alectrica.cl/helper_iframe.html' id='amp-web-push' layout='nodisplay' permission-dialog-url='https://registro.alectrica.cl/permission_dialog.html' service-worker-url='https://registro.alectrica.cl/service_worker.js'></amp-web-push>
+
+
 
           <amp-bodymovin-animation
             layout="fixed"
@@ -1027,7 +1037,7 @@
             items = "."
             single-item
             layout="fixed-height"
-            src="https://www.alectrica.cl/api/v1/electrico/presupuestos.json?clientId=CLIENT_ID(uid)&email=AUTHDATA(current_user)&auth_token=AUTHDATA(auth_token)"  
+            src="https://www.alectrica.cl/api/v1/electrico/presupuestos.json?clientId=CLIENT_ID(uid)&email=AUTHDATA(current_user)&auth_token=AUTHDATA(auth_token)&_=RANDOM""  
             id="items-list" >
 
             <div>
@@ -1066,6 +1076,33 @@
                 aria-describedby = "caption"
                 alt="{{descripcion}}"
                 src="https://registro.alectrica.cl/img/alectrico.png">
+
+                <form method   = "PUT"
+                   class = "close-gallery-button"
+                    action-xhr = "https://backend.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json"
+                    target    = "_top"
+                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
+                   <input name = "clientId" 
+                       type = "hidden" 
+                       value = "CLIENT_ID(uid)" 
+                       data-amp-replace = "CLIENT_ID">
+
+                   <input name = "current_user" 
+                       type = "hidden" 
+                       value = "AUTHDATA(current_user)" 
+                       data-amp-replace = "AUTHDATA(current_user)">
+
+                   <input name = "auth_token" 
+                       type = "hidden" 
+                       value = "AUTHDATA(auth_token)" 
+                       data-amp-replace = "AUTHDATA(auth_token)">
+
+
+                    <button  type = "submit" >REEMBOLSAR</button>
+                </form>
+
+
+
               </amp-img>
 
               <div
