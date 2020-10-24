@@ -1,6 +1,7 @@
 <!doctype html>
 <html amp='' lang='es-CL' prefix='og: http://ogp.me/ns#'>
-  <head>
+  E
+head>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -1021,7 +1022,7 @@
 		      {{/error}}
 
 		    </template>
-	          </div> 
+|::_:-	          </div> 
                 </form>
 	      </div> <!-- si nombre -->
             </div> <!--- sección de diálogo -->
@@ -1065,6 +1066,7 @@
         <template 
           type = "amp-mustache"
           id = "presupuestos-list-template" >
+
            {{^items}}
            No hay items
            {{/items}}
@@ -1077,31 +1079,14 @@
                 alt="{{descripcion}}"
                 src="https://registro.alectrica.cl/img/alectrico.png">
 
-                <form method   = "PUT"
-                   class = "close-gallery-button"
-                    action-xhr = "https://backend.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json"
-                    target    = "_top"
-                    on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
-                   <input name = "clientId" 
-                       type = "hidden" 
-                       value = "CLIENT_ID(uid)" 
-                       data-amp-replace = "CLIENT_ID">
+                <form method = "PUT"
+                  class = "close-gallery-button"
+                  action-xhr = "https://backend.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json"
+                  target = "_top"
+                  on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 
-                   <input name = "current_user" 
-                       type = "hidden" 
-                       value = "AUTHDATA(current_user)" 
-                       data-amp-replace = "AUTHDATA(current_user)">
-
-                   <input name = "auth_token" 
-                       type = "hidden" 
-                       value = "AUTHDATA(auth_token)" 
-                       data-amp-replace = "AUTHDATA(auth_token)">
-
-
-                    <button  type = "submit" >REEMBOLSAR</button>
+                  <button type = "submit" >REEMBOLSAR</button>
                 </form>
-
-
 
               </amp-img>
 
@@ -1109,15 +1094,11 @@
                 id = "caption">
                 {{descripcion}}.
               </div>
-           {{/items}}
-        </template>
 
-
-
+            {{/items}}
+          </template>
         </div> <!-- loggedIn -->
-
       </div>  <!-- ampstart-card m1 -->
     </div>
-
   </body>
 </html>
