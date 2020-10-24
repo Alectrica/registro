@@ -872,7 +872,7 @@ head>
 
          -->
 
-	  <div amp-access="NOT auth_token" amp-access-hide >
+	  <div amp-access="NOT subscriber" amp-access-hide >
 	    <div class = 'stepper vertical' 
               [hidden]='currentStep > 0'>
 	      <div class='clearfix content'>
@@ -910,18 +910,17 @@ head>
                   target='_top' 
                   verify-xhr="https://backendalectrica.herokuapp.com/contactos/verify">
 
-                    <input
+                  <input
                        name='clientId'
                        type='hidden'
                        value="CLIENT_ID(uid)"
                        data-amp-replace="CLIENT_ID"/>
 
-                 <input
+                  <input
                        name='rid'
                        type='hidden'
                        value="CLIENT_ID(amp-access)"
                        data-amp-replace="CLIENT_ID"/>
-
 
 
                  <!---
@@ -1050,13 +1049,16 @@ head>
             </div>
 
             <div fallback>
-              <div class = "content">
+              <div 
+                  class     = "content">
+
                <button 
                  amp-access = "loggedIn"
-                 class="ampstart-btn ml1 caps"
-                 on="tap:items-list.refresh"
-                  type='submit'>Refrescar
+                 class      = "ampstart-btn ml1 caps"
+                 on         = "tap:items-list.refresh"
+                 type       = 'submit'>Refrescar
                 </button>
+
               </div>
             </div>
 
@@ -1068,34 +1070,38 @@ head>
           id = "presupuestos-list-template" >
 
            {{^items}}
-           No hay items
+           No hay presupuestos disponibles
            {{/items}}
            {{#items}}
-              <amp-img width="200"
-                tabindex = 0
-                height="200"
-                layout="fixed"
-                on="tap:llamar-lightbox"
-                aria-describedby = "caption"
-                alt="{{descripcion}}"
-                src="https://registro.alectrica.cl/img/alectrico.png">
+
+              <amp-img width           = "200"
+                tabindex               = 0
+                height                 = "200"
+                layout                 = "fixed"
+                on                     = "tap:llamar-lightbox"
+                aria-describedby       = "caption"
+                alt                    = "{{descripcion}}"
+                src                    = "https://registro.alectrica.cl/img/alectrico.png">
               </amp-img>
 
-                <amp-image-lightbox id="llamar-lightbox"
-                  layout="nodisplay">
+                <amp-image-lightbox
+                  id                   = "llamar-lightbox"
+                  layout               = "nodisplay">
 
-                  <form method   = "POST"
-                    class = "close-gallery-button"
-                    action-xhr = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
-                    target    = "_top"
-                    on = "submit-success:presupupuestos-list.refresh">
+                  <form method         = "POST"
+                    [hidden]           = "{{status}} == REFUNDED"
+                    class              = "close-gallery-button"
+                    action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
+                    target             = "_top"
+                    on                 = "submit-success:presupupuestos-list.refresh">
 
-                    <input name = "clientId" 
-                      type = "hidden" 
-                      value = "CLIENT_ID(uid)" 
+                    <input name        = "clientId" 
+                      type             = "hidden" 
+                      value            = "CLIENT_ID(uid)" 
                       data-amp-replace = "CLIENT_ID">
-
-                     <button  type = "submit" >
+                     
+                     <button 
+                       type            = "submit" >
                        Reembolsar 
                      </button>
                   </form>
