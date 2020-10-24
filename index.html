@@ -1088,7 +1088,6 @@ head>
                   layout               = "nodisplay">
 
                   <form method         = "POST"
-                    [hidden]           = "{{status}} == 'REFUNDED'"
                     class              = "close-gallery-button"
                     action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
                     target             = "_top"
@@ -1100,6 +1099,7 @@ head>
                       data-amp-replace = "CLIENT_ID">
                      
                      <button 
+                       [hidden]        = "{{status}} == 'REFUNDED'"
                        type            = "submit" >
                        Reembolsar 
                      </button>
