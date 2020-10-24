@@ -1083,14 +1083,23 @@ head>
 
                 <amp-image-lightbox id="llamar-lightbox"
                   layout="nodisplay">
-                  <div 
-                    role="button"
-                    tabindex="0">
-                    <a class="ampstart-btn caps m2 close-gallery-button"
-                      href = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json">
-                      Solicitar Reembolso
-                    </a>
-                  </div>
+
+                  <form method   = "POST"
+                    class = "close-gallery-button"
+                    action-xhr = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json" 
+                    target    = "_top"
+                    on = "submit-success:presupupuestos-list.refresh">
+
+                    <input name = "clientId" 
+                      type = "hidden" 
+                      value = "CLIENT_ID(uid)" 
+                      data-amp-replace = "CLIENT_ID">
+
+                     <button  type = "submit" >
+                       Reembolsar 
+                     </button>
+                  </form>
+
                 </amp-image-lightbox>
 
               <div
