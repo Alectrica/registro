@@ -1038,7 +1038,7 @@ head>
             items = "."
             single-item
             layout="fixed-height"
-            src="https://www.alectrica.cl/api/v1/electrico/presupuestos.json?clientId=CLIENT_ID(uid)&email=AUTHDATA(current_user)&auth_token=AUTHDATA(auth_token)&_=RANDOM""  
+            src="https://www.alectrica.cl/api/v1/electrico/presupuestos.json?clientId=CLIENT_ID(uid)&email=AUTHDATA(current_user)&auth_token=AUTHDATA(auth_token)&_=RANDOM"  
             id="items-list" >
 
             <div>
@@ -1081,7 +1081,7 @@ head>
 
                 <form method = "PUT"
                   class = "close-gallery-button"
-                  action-xhr = "https://backend.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json"
+                  action-xhr = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{remember_token}}/refund.json"
                   target = "_top"
                   on = "submit-success:carrusel-list.refresh,cart-list.refresh,ocupacion-list.refresh">
 
