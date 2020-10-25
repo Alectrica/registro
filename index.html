@@ -733,13 +733,13 @@
 
       <div class="ampstart-card m1">
         <button amp-access="auth_token AND NOT loggedIn" amp-access-hide
-          on="tap:amp-access.login-sign-in,presupuestos-list.refresh"
+          on="tap:amp-access.login-sign-in,items-list.refresh"
           class="ampstart-btn ml1 caps">
           Iniciar Sesión
         </button>
 
         <button amp-access="auth_token AND loggedIn" amp-access-hide
-          on="tap:amp-access.login-sign-out,presupuestos-list.refresh"
+          on="tap:amp-access.login-sign-out,items-list.refresh"
           class="ampstart-btn ml1 caps">
           Cerrar
         </button>
@@ -1021,7 +1021,7 @@
 
         <section>
           <amp-list
-            template = "presupuestos-list-template"
+            template = "items-list-template"
             credentials = "omit"
             class="items m1"
             width="auto"
@@ -1047,7 +1047,7 @@
                <button 
                  amp-access = "loggedIn"
                  class      = "ampstart-btn ml1 caps"
-                 on         = "tap:presupuestos-list.refresh"
+                 on         = "tap:items-list.refresh"
                  type       = 'submit'>Refrescar
                 </button>
 
@@ -1083,7 +1083,7 @@
                       class              = "close-gallery-button"
                       action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
                       target             = "_top"
-                      on                 = "submit-success:presupuestos-list.refresh">
+                      on                 = "submit-success:items-list.refresh">
 
                       <input name        = "clientId" 
                         type             = "hidden" 
