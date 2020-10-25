@@ -1106,7 +1106,16 @@
 
                 <amp-image-lightbox
                   id                   = "llamar-lightbox"
+                  on                   = "tap:llamar-lightbox"
                   layout               = "nodisplay">
+                  <div class="video">
+                    <a on="tap:llamar-lightbox.close" 
+                      role="button" 
+                      tabindex="0">
+                      Cerrar
+                    </a>
+                  </div>
+
 
                <!--
                     <form method         = "POST"
