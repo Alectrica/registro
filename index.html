@@ -1094,8 +1094,8 @@
                         data-amp-replace = "CLIENT_ID">
 
                        <button 
-                         hidden          = false
-                         [hidden]        = "{{estado_del_pago}} == 'REFUNDED' ? false : true"
+                         hidden          
+                         [hidden]        = "{{estado_del_pago}} == 'REFUNDED' ? '' : hidden"
                          type            = "submit" >
                          Reembolsar
                        </button
