@@ -1095,9 +1095,9 @@
 
                        <button 
                          class           = "ampstart-btn ml1 caps"
-                         [class]         = "{{estado_del_pago}} == 'REFUNDED' ? 'ampstart-btn ml1 caps' : 'no_display' "
+                         [class]         = "{{estado_del_pago}} == 'REFUNDED' ? 'ampstart-btn ml1 caps' : '' "
                          hidden          = false
-                         [hidden]        = "{{estado_del_pago}} == 'REFUNDED'
+                         [hidden]        = "{{estado_del_pago}} == 'REFUNDED'"
                          type            = "submit" >
                          Reembolsar
                        </button
