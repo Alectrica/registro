@@ -1109,27 +1109,14 @@
                   on                   = "tap:llamar-lightbox.close"
                   layout               = "nodisplay">
 
-                  <div class="video">
-                    <a on="tap:llamar-lightbox.close" 
-                      class= 'ampstart-btn m3 caps'
-                      role="button" 
-                      tabindex="0">
-                      Cerrar
-                    </a>
-                  </div>
-
-
-                 <div class="video">
-                    <a on="tap:llamar-lightbox.close" 
-                      class= 'ampstart-btn m3 caps'
-                      role="button" 
-                      href = {{comprobante_de_pago_url}}
-                      tabindex="0">
-                      Bajar Comprobante de Pago
-                    </a>
-                  </div>
-
-
+              <a class="ampstart-btn caps m2 llamar-gallery-button"
+                href = {{comprobante_de_pago_url}} >
+                Bajar Comprobante de Pago
+              </a>
+              <button 
+                on="tap:llamar-lightbox.close"
+                class="ampstart-btn caps m2 agregar-gallery-button">Cerrar
+              </button>
                <!--
                     <form method         = "POST"
                       class              = "close-gallery-button"
