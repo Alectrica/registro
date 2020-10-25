@@ -1065,14 +1065,12 @@
            No hay presupuestos disponibles
            {{/items}}
            {{#items}}
-      <!--
-         on                     = "tap:llamar-lightbox"
-      -->
               <amp-img width           = "200"
                 tabindex               = 0
                 height                 = "200"
                 layout                 = "fixed"
                 aria-describedby       = "caption"
+                on                     = "tap:llamar-lightbox"
                 alt                    = "{{descripcion}}"
                 src                    = "https://registro.alectrica.cl/img/alectrico.png">
 
@@ -1110,6 +1108,7 @@
                   id                   = "llamar-lightbox"
                   layout               = "nodisplay">
 
+               <!--
                     <form method         = "POST"
                       class              = "close-gallery-button"
                       action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
@@ -1123,11 +1122,11 @@
                      
                        <button 
                          type            = "submit" >
-                         Reembolsar 
+                         Ir a Pagar 
                        </button
 >
                     </form>
-
+                -->
                 </amp-image-lightbox>
 
               <div
