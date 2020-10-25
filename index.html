@@ -1047,7 +1047,7 @@
                <button 
                  amp-access = "loggedIn"
                  class      = "ampstart-btn ml1 caps"
-                 on         = "tap:items-list.refresh"
+                 on         = "tap:presupuestos-list.refresh"
                  type       = 'submit'>Refrescar
                 </button>
 
@@ -1106,10 +1106,12 @@
 
                 <amp-image-lightbox
                   id                   = "llamar-lightbox"
-                  on                   = "tap:llamar-lightbox"
+                  on                   = "tap:llamar-lightbox.close"
                   layout               = "nodisplay">
+
                   <div class="video">
                     <a on="tap:llamar-lightbox.close" 
+                      class= 'ampstart-btn ml1 caps'
                       role="button" 
                       tabindex="0">
                       Cerrar
