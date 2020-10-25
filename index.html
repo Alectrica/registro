@@ -733,13 +733,13 @@
 
       <div class="ampstart-card m1">
         <button amp-access="auth_token AND NOT loggedIn" amp-access-hide
-          on="tap:amp-access.login-sign-in"
+          on="tap:amp-access.login-sign-in,presupuestos-list.refresh"
           class="ampstart-btn ml1 caps">
           Iniciar Sesión
         </button>
 
         <button amp-access="auth_token AND loggedIn" amp-access-hide
-          on="tap:amp-access.login-sign-out"
+          on="tap:amp-access.login-sign-out,presupuestos-list.refresh"
           class="ampstart-btn ml1 caps">
           Cerrar
         </button>
@@ -1108,10 +1108,16 @@
                   id                   = "llamar-lightbox"
                   layout               = "nodisplay">
 
-              <a class="info-button"
-                href = {{comprobante_de_pago_url}} >
-                 Comprobante de Pago
-              </a>
+
+                  <div 
+                    role="button"
+                    tabindex="0">
+                    <a class="ampstart-btn caps m2 llamar-gallery-button"
+                      href = "tel:+56962000921">
+                      Llamar
+                    </a>
+                  </div>
+
                <!--
                     <form method         = "POST"
                       class              = "close-gallery-button"
