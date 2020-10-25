@@ -1083,18 +1083,10 @@
 
 
                     <form method         = "POST"
-                      class              = "ampstart-btn ml1 caps"
+                      class              = "close-gallery-button"
                       action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
                       target             = "_top"
                       on                 = "submit-success:presupupuestos-list.refresh">
-
-               <button 
-                 amp-access = "loggedIn"
-                 class      = "ampstart-btn ml1 caps"
-                 on         = "tap:items-list.refresh"
-                 type       = 'submit'>Reembolsar
-                </button>
-
 
                       <input name        = "clientId" 
                         type             = "hidden" 
@@ -1102,6 +1094,7 @@
                         data-amp-replace = "CLIENT_ID">
 
                        <button 
+                         class           = "ampstart-btn ml1 caps"
                          type            = "submit" >
                          Reembolsar
                        </button
