@@ -1094,10 +1094,8 @@
                         data-amp-replace = "CLIENT_ID">
 
                        <button 
-                         class           = "ampstart-btn ml1 caps"
-                         [class]         = "{{estado_del_pago}} == 'REFUNDED' ? 'ampstart-btn ml1 caps' : '' "
                          hidden          = false
-                         [hidden]        = "{{estado_del_pago}} == 'REFUNDED' ? true : false"
+                         [hidden]        = "{{estado_del_pago}} == 'REFUNDED' ? false : true"
                          type            = "submit" >
                          Reembolsar
                        </button
