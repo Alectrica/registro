@@ -1065,15 +1065,37 @@
            No hay presupuestos disponibles
            {{/items}}
            {{#items}}
-
+      <!--
+         on                     = "tap:llamar-lightbox"
+      -->
               <amp-img width           = "200"
                 tabindex               = 0
                 height                 = "200"
                 layout                 = "fixed"
-                on                     = "tap:llamar-lightbox"
                 aria-describedby       = "caption"
                 alt                    = "{{descripcion}}"
                 src                    = "https://registro.alectrica.cl/img/alectrico.png">
+
+                    <form method         = "POST"
+                      class              = "close-gallery-button"
+                      action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
+                      target             = "_top"
+                      on                 = "submit-success:presupupuestos-list.refresh">
+
+                      <input name        = "clientId" 
+                        type             = "hidden" 
+                        value            = "CLIENT_ID(uid)" 
+                        data-amp-replace = "CLIENT_ID">
+
+                       <button 
+                         type            = "submit" >
+                         Reembolsar
+                       </button
+>
+                    </form>
+
+
+
               </amp-img>
 
                 <amp-image-lightbox
