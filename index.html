@@ -1076,13 +1076,6 @@
                 alt                    = "{{descripcion}}"
                 src                    = "https://registro.alectrica.cl/img/alectrico.png">
 
-               <button 
-                 amp-access = "loggedIn"
-                 class      = "ampstart-btn ml1 caps"
-                 on         = "tap:items-list.refresh"
-                 type       = 'submit'>Reembolsar
-                </button>
-
              <!--
                  class="fadeIn"
                  [hidden]="product.selectedColor != 'red'">
@@ -1090,10 +1083,18 @@
 
 
                     <form method         = "POST"
-                      class              = "close-gallery-button"
+                      class              = "ampstart-btn ml1 caps"
                       action-xhr         = "https://www.alectrica.cl/api/v1/electrico/presupuestos/{{id}}/refund.json" 
                       target             = "_top"
                       on                 = "submit-success:presupupuestos-list.refresh">
+
+               <button 
+                 amp-access = "loggedIn"
+                 class      = "ampstart-btn ml1 caps"
+                 on         = "tap:items-list.refresh"
+                 type       = 'submit'>Reembolsar
+                </button>
+
 
                       <input name        = "clientId" 
                         type             = "hidden" 
