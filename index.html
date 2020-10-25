@@ -932,10 +932,10 @@
 			  <input class='block border-none p0 m0' id='verification-email' name='email' on='select:AMP.setState({ contactoSelected: true})' placeholder='email' required='' type='email'>
 			  <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='email'>Email</label>
 			  <span validation-for='verification-email' visible-when-invalid='customError'>Este email ya ha sido ocupado por otra persona. Intente con otro.
-			  <button amp-access-hide='' amp-access='NOT loggedIn' class='ampstart-btn mx1 mt1 caps' on='tap:AMP.setState({consentimiento: false}),amp-access.login-sign-in' tabindex='0'>Aceptar</button>
+	                     <button amp-access-hide='' amp-access='NOT loggedIn' class='ampstart-btn mx1 mt1 caps' on='tap:AMP.setState({consentimiento: false}),amp-access.login-sign-in' tabindex='0'>Aceptar</button>
 			  </span>
-			  <span validation-for='verification-email' visible-when-invalid='valueMissing'></span>
-			  <span validation-for='verification-email' visible-when-invalid='typeMismatch'></span>
+			  <span validation-for='verification-email' visible-when-invalid='valueMissing'>Por favor digite un email</span>
+			  <span validation-for='verification-email' visible-when-invalid='typeMismatch'>Se ha detectado un error tipográfico al revisar el email</span>
 		        </div>
 		      </div>
 
@@ -943,7 +943,7 @@
 		        <div class='ampstart-input inline-block relative m0 p0 mb3'>
 			  <input class='block border-none p0 m0' id='name' name='name' placeholder='Nombre' required type='text' value=''>
 			  <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='name'>Nombre</label>
-			  <span validation-for='name' visible-when-invalid='valueMissing'></span>
+			  <span validation-for='name' visible-when-invalid='valueMissing'>Por favor, digite el nombre del contacto</span>
 		        </div>
 		      </div>
 
@@ -951,8 +951,8 @@
 		        <div class='ampstart-input inline-block relative m0 p0 mb3'>
 			  <input class='block border-none p0 m0' id='verification-fono' name='fono' pattern='(\+56|56|)\W*(2|9)\W*[0-9]{8}' placeholder='Fono' required='' type='text' value=''>
 			  <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='fono'>Fono</label>
-			  <span validation-for='verification-fono' visible-when-invalid='valueMissing'></span>
-			  <span validation-for='verification-fono' visible-when-invalid='typeMismatch'></span>
+			  <span validation-for='verification-fono' visible-when-invalid='valueMissing'>Por favor digite un número de teléfono</span>
+			  <span validation-for='verification-fono' visible-when-invalid='typeMismatch'>Se ha detectado un error en el formato del número del teléfono</span>
 			  <span validation-for='verification-fono' visible-when-invalid='patternMismatch'>Debe tener 9 dígitos y puede ingresar el código de país. Ejemplos: 987654321,+56987654321, 227654321, +56227654321</span>
 		        </div>
 		      </div>
@@ -961,8 +961,8 @@
                         <div class='ampstart-input inline-block relative m0 p0 mb3'>
                           <input  class='block border-none p0 m0' id='password' name='password' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='password' value='1'>
                           <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='password'>Password</label>
-                          <span validation-for='password' visible-when-invalid='valueMissing'></span>
-                          <span validation-for='password' visible-when-invalid='typeMismatch'></span>
+                          <span validation-for='password' visible-when-invalid='valueMissing'>Por favor, digite una contraseña que no sea la que sua en su banco</span>
+                          <span validation-for='password' visible-when-invalid='typeMismatch'>Se ha detectado un error tipográfico en la contraseña que ha digitado</span>
                           <span validation-for='password' visible-when-invalid='patternMismatch'>Debe tener 8 o más aracteres.</span>
                         </div>
                       </div>
@@ -971,8 +971,8 @@
                         <div class='ampstart-input inline-block relative m0 p0 mb3'>
                           <input class='block border-none p0 m0' id='verification-password' name='password_confirmation' pattern='\w{8,}' placeholder='Password (6 caracteres)' required='' type='password' value='1'>
                           <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='verification-password'>Repita la Password</label>
-                          <span validation-for='verification-password' visible-when-invalid='valueMissing'></span>
-                          <span validation-for='verification-password' visible-when-invalid='typeMismatch'></span>
+                          <span validation-for='verification-password' visible-when-invalid='valueMissing'>Por favor, digite exactamente lo mismo que ingresó como contraseña en el paso anterior</span>
+                          <span validation-for='verification-password' visible-when-invalid='typeMismatch'>Se ha detectado un error tipográfico en lo que ha digitado</span>
                           <span validation-for='verification-password' visible-when-invalid='patternMismatch'>Debe tener 8 o más caracteres.</span>
                         </div>
                       </div>
